@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://cup7k1frhg3re"]
+
+[ext_resource type="Script" uid="uid://dsmrridq6vjqg" path="res://Player/player.gd" id="1_4ntmi"]
+[ext_resource type="PackedScene" uid="uid://cbkustqpfclri" path="res://Player/camera_controller.tscn" id="2_4ntmi"]
+[ext_resource type="Texture2D" uid="uid://beku0qch6kftf" path="res://Textures/leather.jpg" id="2_btcbx"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hvfyp"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_l8h54"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gwnis"]
+albedo_texture = ExtResource("2_btcbx")
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_4ntmi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_hvfyp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_l8h54")
+surface_material_override/0 = SubResource("StandardMaterial3D_gwnis")
+
+[node name="cameraController" parent="." instance=ExtResource("2_4ntmi")]
+transform = Transform3D(0.999848, 0.00653779, -0.0161816, 0, 0.927184, 0.374607, 0.0174524, -0.37455, 0.927043, 0, 0.3, 0)
