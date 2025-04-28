@@ -1,0 +1,11 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Godot temporary files
+*.tmp
+*.log
+*.translation
+
+# Export templates
+export_presets.cfg
