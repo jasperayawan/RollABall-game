@@ -1,21 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://duf525syrhkeb"]
+[gd_scene load_steps=5 format=3 uid="uid://cexjcfgq5g5mf"]
 
-[ext_resource type="Script" uid="uid://bitj867a6cfgt" path="res://Pickup/box.gd" id="1_kmh6k"]
+[ext_resource type="Script" uid="uid://cj14fdq1dc4f0" path="res://Pickup/box.gd" id="1_kmh6k"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_dxvic"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_kmh6k"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_kmh6k"]
+[sub_resource type="BoxMesh" id="BoxMesh_3dmye"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3dmye"]
-albedo_color = Color(0.216638, 0.464746, 0.308631, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kmh6k"]
+albedo_color = Color(0.427608, 0.36718, 0.145293, 1)
 
-[node name="Box" type="StaticBody3D"]
+[node name="Box" type="Area3D"]
 script = ExtResource("1_kmh6k")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0.215396, 0)
-shape = SubResource("BoxShape3D_dxvic")
+transform = Transform3D(0.54, 0, 0, 0, 0.54, 0, 0, 0, 0.54, 0, 0.214288, 0)
+shape = SubResource("BoxShape3D_kmh6k")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
-mesh = SubResource("BoxMesh_kmh6k")
-surface_material_override/0 = SubResource("StandardMaterial3D_3dmye")
+mesh = SubResource("BoxMesh_3dmye")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_kmh6k")

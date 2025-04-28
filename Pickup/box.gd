@@ -1,12 +1,15 @@
 extends Area3D
 
 
-signal picked_up
+@export var collect_sound: AudioStreamPlayer3D
 
 func _ready():
-	pass
+	connect("body_entered", Callable(self, "_on_body_entered"))
 
 func _on_body_entered(body):
-	if body.is_in_group("Player"):
-		picked_up.emit()
-		queue_free()
+	if body.is_in_group("player"):
+		# Play sound if set
+		if collect_sound:
+			collect_sound.play()
+		print("Collected item!")
+		queue_free()  # Remove the box

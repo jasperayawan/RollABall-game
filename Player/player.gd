@@ -24,6 +24,7 @@ const MAX_JUMPS := 2
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	add_to_group("player")
 	# Assuming the ball mesh is a child of the current node
 	ball_mesh = $MeshInstance3D # Use the correct node path if needed (e.g., "$MeshInstance3D")
 

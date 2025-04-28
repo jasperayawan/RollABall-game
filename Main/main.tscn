@@ -1,8 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cakhwfii5s073"]
+[gd_scene load_steps=11 format=3 uid="uid://cakhwfii5s073"]
 
 [ext_resource type="Texture2D" uid="uid://dfo1hnurbrlfb" path="res://Textures/flagstone-rubble.jpg" id="1_2w1kt"]
 [ext_resource type="PackedScene" uid="uid://cup7k1frhg3re" path="res://Player/player.tscn" id="1_yh5la"]
 [ext_resource type="PackedScene" uid="uid://d2upfgo667wo5" path="res://Meshes/wall.tscn" id="4_eunhr"]
+[ext_resource type="PackedScene" uid="uid://cexjcfgq5g5mf" path="res://Pickup/box.tscn" id="4_k3v36"]
+
+[sub_resource type="GDScript" id="GDScript_eunhr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2w1kt"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -24,6 +27,7 @@ albedo_texture = ExtResource("1_2w1kt")
 size = Vector3(40, 0.5, 40)
 
 [node name="Main" type="Node3D"]
+script = SubResource("GDScript_eunhr")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_eunhr")
@@ -59,3 +63,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0323939, 0, 39.6872)
 
 [node name="Wall4" parent="Walls" instance=ExtResource("4_eunhr")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.8225, 0, 19.8542)
+
+[node name="Boxes" type="Node3D" parent="."]
+
+[node name="Box" parent="Boxes" instance=ExtResource("4_k3v36")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.65285, 0.292258, 0.776016)
+
+[node name="Box6" parent="Boxes" instance=ExtResource("4_k3v36")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78145, 0.292258, 4.07844)
+
+[node name="Box2" parent="Boxes" instance=ExtResource("4_k3v36")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.17914, 0.292258, 8.81849)
+
+[node name="Box3" parent="Boxes" instance=ExtResource("4_k3v36")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.46895, 0.845669, 12.746)
+
+[node name="Box4" parent="Boxes" instance=ExtResource("4_k3v36")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.06731, 0.850652, 10.7909)
+
+[node name="Box5" parent="Boxes" instance=ExtResource("4_k3v36")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.06731, 1.72411, 12.9385)
