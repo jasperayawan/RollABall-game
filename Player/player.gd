@@ -90,3 +90,8 @@ func rotate_ball(delta: float) -> void:
 			
 			# Rotate the ball around the correct axis
 			ball_mesh.rotate_object_local(rotation_axis, rotation_amount)
+			
+func _unhandled_key_input(event: InputEvent) -> void:
+	if Input.is_action_pressed("ui_cancel"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		
