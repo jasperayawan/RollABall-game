@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3r4urq4wrr83"]
+
+[ext_resource type="Script" uid="uid://dbunptdksq8gx" path="res://UI/ui.gd" id="1_2fwl4"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_2fwl4")
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -30.5
+offset_right = 30.5
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Score: 0"
+
+[node name="WinLabel" type="Label" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 34.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "You Win!"

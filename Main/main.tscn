@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://cakhwfii5s073"]
+[gd_scene load_steps=12 format=3 uid="uid://cakhwfii5s073"]
 
 [ext_resource type="Texture2D" uid="uid://dfo1hnurbrlfb" path="res://Textures/flagstone-rubble.jpg" id="1_2w1kt"]
 [ext_resource type="PackedScene" uid="uid://cup7k1frhg3re" path="res://Player/player.tscn" id="1_yh5la"]
 [ext_resource type="PackedScene" uid="uid://d2upfgo667wo5" path="res://Meshes/wall.tscn" id="4_eunhr"]
 [ext_resource type="PackedScene" uid="uid://cexjcfgq5g5mf" path="res://Pickup/box.tscn" id="4_k3v36"]
+[ext_resource type="PackedScene" uid="uid://d3r4urq4wrr83" path="res://UI/ui.tscn" id="5_k3v36"]
 
 [sub_resource type="GDScript" id="GDScript_eunhr"]
 
@@ -83,3 +84,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.06731, 0.850652, 10.7909)
 
 [node name="Box5" parent="Boxes" instance=ExtResource("4_k3v36")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.06731, 1.72411, 12.9385)
+
+[node name="UI" parent="." instance=ExtResource("5_k3v36")]
