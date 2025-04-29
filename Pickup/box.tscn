@@ -7,7 +7,7 @@
 [sub_resource type="BoxMesh" id="BoxMesh_3dmye"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kmh6k"]
-albedo_color = Color(0.427608, 0.36718, 0.145293, 1)
+albedo_color = Color(0.955861, 0, 0.421535, 1)
 
 [node name="Box" type="Area3D"]
 script = ExtResource("1_kmh6k")

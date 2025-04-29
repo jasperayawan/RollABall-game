@@ -64,7 +64,7 @@ func movement(delta: float) -> void:
 		else:
 			velocity.y -= fall_gravity * delta
 
-func jump(delta: float) -> void:
+func jump(_delta: float) -> void:
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
 			# First jump when on the floor
@@ -91,7 +91,7 @@ func rotate_ball(delta: float) -> void:
 			# Rotate the ball around the correct axis
 			ball_mesh.rotate_object_local(rotation_axis, rotation_amount)
 			
-func _unhandled_key_input(event: InputEvent) -> void:
+func _unhandled_key_input(_event: InputEvent) -> void:
 	if Input.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		

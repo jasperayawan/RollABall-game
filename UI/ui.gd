@@ -16,12 +16,11 @@ func _ready():
 	restart_button.visible = false
 	timer_label.visible = true
 	restart_button.pressed.connect(restart_game)
-	loss_timer.timeout.connect(_on_loss_timer_timeout)
 	loss_timer.start()
 	total_pickups = get_tree().get_nodes_in_group("Pickups").size()
 	update_score()
 
-func _process(delta):
+func _process(_delta):
 	var time_left = int(loss_timer.time_left)
 	timer_label.text = "Time Left: %d" % time_left
 
